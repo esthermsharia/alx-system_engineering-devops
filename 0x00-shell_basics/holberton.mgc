@@ -1,2 +1,2 @@
-0   search HOLBERTON Holberton
-:!mime  data
+#!/bin/bash
+0 search HOLBERTON Holberton data
