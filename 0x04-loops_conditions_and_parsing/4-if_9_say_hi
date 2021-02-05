@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+#Display "display holberton school 10 times, 9th time display hi"
+
+i=0
+
+while [ $i -lt 10 ]
+do
+  if [[ $i -eq 8 ]]
+  then
+    echo "Hi"
+  else
+    echo "Holberton School"
+  fi
+  ((i++))
+done
