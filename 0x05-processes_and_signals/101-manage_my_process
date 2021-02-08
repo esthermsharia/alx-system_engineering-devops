@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-
 #Manages manage_my_process program.
 
 #When passing the argument start:
