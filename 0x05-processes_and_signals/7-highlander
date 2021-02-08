@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
-
 #Set trap for SIGTERM signals.
+
 trap func SIGTERM
 
 

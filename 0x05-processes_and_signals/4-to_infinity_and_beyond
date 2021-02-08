@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-
 #displays To infinity and beyond indefinitely
 
 flag=0

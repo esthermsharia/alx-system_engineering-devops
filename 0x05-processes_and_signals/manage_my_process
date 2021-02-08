@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-
 #Writes "I am alive" to the file /tmp/my_process indefinitely.
 
 
