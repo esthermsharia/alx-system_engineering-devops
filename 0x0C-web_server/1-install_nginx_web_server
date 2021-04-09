@@ -6,8 +6,8 @@
 # it must return a page that contains the string Holberton School
 # systemctl cannot be used to restart nginx.
 
-sudo apt-get -y update
-sudo apt-get -y upgrade
-sudo apt-get -y install nginx
-sudo echo "Holberton School" >> /usr/share/nginx/html/index.html
-sudo service nginx restart
+apt-get -y update
+apt-get -y upgrade
+apt-get -y install nginx
+echo "Holberton School" >> /var/www/html/index.nginx-debian.html
+service nginx restart
