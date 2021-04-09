@@ -8,5 +8,6 @@ sed -i "21s/^listen .*/listen 80" /etc/nginx/sites-enabled/default
 ufw allow 'Nginx HTTP'
 echo "Holberton School" >> /var/www/html/index.html
 file_loc=/etc/nginx/sites-enabled/default
-sed "/^server_name .*/a rewrite ^/redirect_me https://www.youtube.com/watch?v=QH2-TGUlwu4/$1 permanent;" $file_loc
+actual_com="rewrite ^/redirect_me https://www.youtube.com/watch?v=QH2-TGUlwu4/$1";
+sed "/^server_name .*/a rewrite ^/${actual_com} permanent;" $file_loc
 service nginx restart
