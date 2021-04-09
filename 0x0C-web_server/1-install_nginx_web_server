@@ -12,4 +12,4 @@ apt-get -y install nginx
 sed -i "/^listen .*/listen   80" /etc/nginx/sites-enabled/default
 ufw allow 'Nginx HTTP'
 echo "Holberton School" >> /var/www/html/index.html
-service nginx restart
+service nginx start
