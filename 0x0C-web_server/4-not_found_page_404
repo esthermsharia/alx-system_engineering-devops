@@ -10,6 +10,5 @@ file_path=/etc/nginx/sites-enabled/default
 redirect="\	rewrite ^/redirect_me https://www.youtube.com/watch?v=QH2-TGUlwu4/$1";
 sed -i " /server_name _;/a ${redirect} permanent;" $file_path
 echo "Ceci n'est pas une page" > /usr/share/nginx/html/custom_404.html
-err="error_page\ 404 /custom_404.html;\n\    location\ = \ /custom_404.html\  {\n\        root\ /usr/share/nginx/html;\n        internal;\n\    }"
-sed -i "/server_name_;/a ${err}" $file_path;
-service nginx start
+err="\        error_page\ 404 /custom_404.html;\n\        location\ = \ /custom_404.html\  {\n\t\troot\ /usr/share/nginx/html;\n\t\tinternal;\n\t}"
+sed -i "/server_name _;/a ${err}" $file_path
