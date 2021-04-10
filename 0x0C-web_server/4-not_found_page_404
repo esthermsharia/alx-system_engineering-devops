@@ -12,3 +12,4 @@ sed -i " /server_name _;/a ${redirect} permanent;" $file_path
 echo "Ceci n'est pas une page" > /usr/share/nginx/html/custom_404.html
 err="\        error_page\ 404 /custom_404.html;\n\        location\ = \ /custom_404.html\  {\n\t\troot\ /usr/share/nginx/html;\n\t\tinternal;\n\t}"
 sed -i "/server_name _;/a ${err}" $file_path
+service nginx restart
