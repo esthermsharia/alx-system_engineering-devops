@@ -3,3 +3,4 @@
 
 sed -i '0,/listen.*.default_server/ s/listen.*.default_server/listen 80 default_server/1' /etc/nginx/sites-enabled/default
 sed -i '0,/listen [.*.default_server/ s/listen.*.default_server/listen [::]:80 default_server/1' /etc/nginx/sites-enabled/default
+service nginx restart
