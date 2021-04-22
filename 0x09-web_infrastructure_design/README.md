@@ -1,6 +1,6 @@
 # Web infrastructure design
 
-This is a project in which i explore web infrastructure design.
+In this project I explore web infrastructure design.
 Web infrastructure designs are whiteboarded and uploaded to an image
 hosting service.
 The links are then inserted in the files in this project.
