@@ -4,8 +4,11 @@
 
 apt-get -y install ufw
 sed -i 's/IPV6=.*/IPV6=yes/' /etc/default/ufw
-yes | ufw enable
+yes | ufw disable
+yes | ufw reset
 yes | ufw default deny incoming
 yes | ufw default allow outgoing
-yes | ufw allow proto tcp from any to any port 80,443
-yes | ufw allow 22/tcp
+yes | ufw allow http
+yes | ufw allow ssh
+yes | ufw allow  https
+yes | ufw enable
