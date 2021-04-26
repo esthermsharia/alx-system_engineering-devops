@@ -2,10 +2,10 @@
 # Configures an uncomplicated firewall that blocks all incoming traffic
 # for the tcp ports 22(SSH) 443(HTTPS SSL) and 80(HTTP).
 
-apt-get -y ufw
+apt-get -y install ufw
 sed -i 's/IPV6=.*/IPV6=yes/' /etc/default/ufw
-ufw enable
-ufw default deny incoming
-ufw default allow outgoing
-ufw allow proto tcp from any to any port 80,443
-ufw allow 22/tcp
+yes | ufw enable
+yes | ufw default deny incoming
+yes | ufw default allow outgoing
+yes | ufw allow proto tcp from any to any port 80,443
+yes | ufw allow 22/tcp
