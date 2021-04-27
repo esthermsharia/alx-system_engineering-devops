@@ -9,7 +9,8 @@ yes | ufw reset
 yes | ufw default deny incoming
 yes | ufw default allow outgoing
 
-yes | ufw allow 80/TCP
+yes | ufw allow 80/tcp
 yes | ufw allow ssh
-yes | ufw allow  443/TCP
+yes | ufw allow  443
+yes | ufw allow https
 yes | ufw enable
