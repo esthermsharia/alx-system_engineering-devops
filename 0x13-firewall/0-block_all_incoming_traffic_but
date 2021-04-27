@@ -5,9 +5,11 @@
 apt-get -y install ufw
 yes | ufw disable
 yes | ufw reset
+
 yes | ufw default deny incoming
 yes | ufw default allow outgoing
-yes | ufw allow http
+
+yes | ufw allow 80/TCP
 yes | ufw allow ssh
-yes | ufw allow  https
+yes | ufw allow  443/TCP
 yes | ufw enable
