@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# Ensures nginx is running as nginx user.
+# Ensures that nginx is listening on all active IPs on port 8080
+
+sudo service nginx stop
+file="/etc/nginx/sites-enabled/default"
+sed -i 's/listen .*::.* default_server;/listen [::]:8080 default_server;/' $file
+sed -i '/:/!s/listen .*/listen 8080 default_server;/' $file
+sudo adduser -q --system --no-create-home --disabled-login --disabled-password --group nginx
+sudo -u nginx "service nginx restart"
