@@ -3,8 +3,8 @@
 Queries information from the JSON placeholder API.
 Returns the information about an employee's TODO list progress.
 """
-import sys
 import requests
+import sys
 
 
 url = 'https://jsonplaceholder.typicode.com/'
