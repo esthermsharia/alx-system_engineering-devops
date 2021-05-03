@@ -6,16 +6,15 @@ Returns the information about an employee's TODO list progress.
 import requests
 import sys
 
-
-url = 'https://jsonplaceholder.typicode.com/'
-user_url = url + "users/{}".format(sys.argv[1])
-todo_url = url + "todos"
-params = {"userId": sys.argv[1]}
-user = requests.get(url=user_url).json()
-todos = requests.get(url=todo_url, params=params).json()
-completed = []
-
 if __name__ == "__main__":
+    url = 'https://jsonplaceholder.typicode.com/'
+    user_url = url + "users/{}".format(sys.argv[1])
+    todo_url = url + "todos"
+    params = {"userId": sys.argv[1]}
+    user = requests.get(url=user_url).json()
+    todos = requests.get(url=todo_url, params=params).json()
+    completed = []
+
     for todo in todos:
         if todo.get("completed") is True:
             completed.append(todo.get("title"))
