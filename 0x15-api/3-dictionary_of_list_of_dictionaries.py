@@ -16,5 +16,4 @@ if __name__ == "__main__":
             "username": user.get("username")
         }for todo in requests.get(url + "todos",
                                   params={"userId": user.get("id")}
-                                  ).json()]for user in users},json_file)
-        
+                                  ).json()]for user in users}, json_file)
