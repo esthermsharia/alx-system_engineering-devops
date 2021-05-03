@@ -15,8 +15,7 @@ if __name__ == "__main__":
     todos = requests.get(url=todo_url, params=params).json()
 
     with open("{}.json".format(sys.argv[1]), "w") as json_file:
-        for todo in todos:
-            json.dump({sys.argv[1]: [{
-                "task": todo.get("title"),
-                "completed": todo.get("completed"),
-                "username": user.get("username")}]}, json_file)
+        json.dump({sys.argv[1]: [{
+            "task": todo.get("title"),
+            "completed": todo.get("completed"),
+            "username": user.get("username")} for todo in todos]}, json_file)
